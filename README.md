@@ -43,4 +43,4 @@ rating trends, online delivery adoption, and value-for-money restaurants.
 - CTEs
 - Window Functions
 
-  
+ https://github.com/NaveeraYusuf/Zomato-SQL-Data-Analysis/blob/main/ZOMATO.sql 
