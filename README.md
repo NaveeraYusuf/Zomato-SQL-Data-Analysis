@@ -51,7 +51,7 @@ where Country_Code =1
 GROUP BY City
 ORDER BY Restaurant_count DESC
 limit 10;
-
+```
 
 ###Q2: Most popular cuisines in India
 ```sql
@@ -64,7 +64,7 @@ WHERE Country_Code = 1
 GROUP BY Cuisines
 ORDER BY count DESC
 LIMIT 15;
-
+```
 ###Q3: Online delivery adoption by city
 ```sql
 SELECT City,
@@ -77,7 +77,7 @@ GROUP BY City
 HAVING COUNT(*) > 50
 ORDER BY delivery_pct DESC
 LIMIT 10;
-
+```
 ###Q4: Does table booking affect ratings?
 ```sql
 SELECT Has_Table_booking,
@@ -88,7 +88,7 @@ FROM zomato
 WHERE Country_Code = 1
   AND Aggregate_rating > 0
 GROUP BY Has_Table_booking;
-
+```
 ###Q5: Price range vs average rating
 ```sql
 SELECT
@@ -106,7 +106,7 @@ WHERE Country_Code = 1
   AND Aggregate_rating > 0
 GROUP BY price_category
 ORDER BY avg_rating DESC;
-
+```
 ###Q6: Best value restaurants — high rating, low cost, high votes
 ```sql
 SELECT Restaurant_Name, City, Cuisines,
@@ -118,7 +118,7 @@ WHERE Country_Code = 1
   AND Votes >= 200
 ORDER BY Aggregate_rating DESC, Votes DESC
 LIMIT 20;
-
+```
 ###Q7: Which city has the most Excellent rated restaurants?
 ```sql
 SELECT City,
@@ -129,7 +129,7 @@ WHERE Country_Code = 1
 GROUP BY City
 ORDER BY excellent_restaurants DESC
 LIMIT 10;
-
+```
 ###Q8: Correlation — do more votes mean higher rating?
 ```sql
 SELECT
@@ -146,5 +146,5 @@ WHERE Country_Code = 1
   AND Aggregate_rating > 0
 GROUP BY vote_category
 ORDER BY avg_rating DESC;
-
+```
  https://github.com/NaveeraYusuf/Zomato-SQL-Data-Analysis/blob/main/ZOMATO.sql 
