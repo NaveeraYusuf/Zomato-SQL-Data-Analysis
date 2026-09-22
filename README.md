@@ -42,3 +42,13 @@ rating trends, online delivery adoption, and value-for-money restaurants.
 - Subqueries
 - CTEs
 - Window Functions
+
+  ## SQL Analysis & Queries
+  ### Q1: Which cities in India have the most restaurants?
+  '''sql
+SELECT City,count(*) as Restaurant_count from zomato
+where Country_Code =1
+GROUP BY City
+ORDER BY Restaurant_count DESC
+limit 10;
+
